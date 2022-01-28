@@ -1,1 +1,19 @@
-print('Hello, world')
+import os
+import time
+
+file = 'C:/Users/PxC/Desktop/files/file1.txt'
+folder = 'C:/Users/PxC/Desktop/files'
+folder1 = 'C:/Users/PxC/Desktop/files/folder1'
+
+
+
+create_time = os.path.getctime(file)
+format_cr_time = time.localtime(create_time)
+
+normal_view_fcrt = time.strftime('%d.%m.%Y %H:%M:%S', format_cr_time)
+
+print(normal_view_fcrt)
+
+print(os.listdir(path=folder))  # список файлов и директорий в папке.
+
+os.mkdir(folder1)  # создаёт директорию. OSError, если директория существует.
